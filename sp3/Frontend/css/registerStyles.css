@@ -1,3 +1,4 @@
+
 .nombre-proyecto{
     font-family: 'Roboto', sans-serif !important;
     color: #3bb8db !important;
@@ -26,7 +27,8 @@
 }
 
 .registered-block{
-    margin-top: auto;
+    
+    margin: 10px auto;
 }
 
 .register-btn:hover{
