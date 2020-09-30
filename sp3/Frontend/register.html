@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/registerStyles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/icono.jpg" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/5843da1e4e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-light">
+        <a class="navbar-brand nombre-proyecto" href="index.html">PROYECTO MORAZÁN</a>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row centrar-form" style="width: 50%;">
+            <div class="col-12">
+                <h1 id="titleRegister" >Registro</h1>
+            </div>
+            <div class="col-xl-6 col-md-6 col-sm-12">
+                <label for="" class="col-form-label">Nombre</label>
+                <input id="nombre" type="text" class="form-control">
+            </div>
+            <div class="col-xl-6 col-md-6 col-sm-12">
+                <label for="" class="col-form-label">Apellido</label>
+                <input id="apellido" type="text" class="form-control">
+            </div>
+            <div class="col-xl-6 col-md-6 col-sm-12">
+                <label for="" class="col-form-label">Institución</label>
+                <input id="institucion" type="text" class="form-control">
+            </div>
+            <div class="col-xl-6 col-md-6 col-sm-12">
+                <label for="" class="col-form-label">País</label>
+                <input input="pais" type="text" class="form-control">
+            </div>
+            <div class="col-xl-6 col-md-6 col-sm-12">
+                <label for="" class="col-form-label">Correo electrónico</label>
+                <input id="email" type="text" class="form-control">
+            </div>
+            <div class="col-xl-6 col-md-6 col-sm-12">
+                <label for="" class="col-form-label">Confirmar correo electrónico</label>
+                <input id="confirm-email" type="text" class="form-control">
+            </div>
+            <div class="col-xl-6 col-md-6 col-sm-12">
+                <label for="" class="col-form-label">Contraseña</label>
+                <input id="password" type="password" class="form-control">
+            </div>
+            <div class="col-xl-6 col-md-6 col-sm-12">
+                <label for="" class="col-form-label">Confirmar contraseña</label>
+                <input id="confirm-password" type="password" class="form-control">
+            </div>
+            <div class="col-12">
+                <label for="" class="col-form-label">Género</label>
+                <div class="form-check">
+                        <input id="man" class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="Masculino">
+                        <label class="form-check-label" for="exampleRadios2" style="width: 100px;">
+                            Masculino
+                        </label>
+                        <input id="woman" class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="Femenino">
+                        <label class="form-check-label" for="exampleRadios2">
+                            Femenino
+                        </label>
+                </div>
+            </div>
+            <br><br>
+            <div class="col-xl-6 registered-block">
+                <section>¿Ya estás registrado/a? <a href="#">Inicia sesión</a> </section> 
+            </div>
+            <div class="col-xl-6 registered-block">
+                <button type="button" class="btn register-btn">Registrarme</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

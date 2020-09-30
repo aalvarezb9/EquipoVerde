@@ -1,0 +1,49 @@
+.nombre-proyecto{
+    font-family: 'Roboto', sans-serif !important;
+    color: #3bb8db !important;
+    font-weight: 600 !important;
+    margin-left: 3%;
+    margin-top: 1%;
+    text-shadow: none;
+}
+
+.form-check-label{
+    width: 100px;
+}
+
+.centrar-form{
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.register-btn{
+    background-color: #3bb8db;
+    border-radius: 30px;
+    color: white;
+    font-family: sans-serif;
+    float: right;
+    padding: 5px 50px;
+}
+
+.registered-block{
+    margin-top: auto;
+}
+
+.register-btn:hover{
+    color: white !important;
+    background-color: #1d98b6;
+}
+
+.registered-block a{
+    text-decoration: none;
+    color: #3bb8db;
+}
+
+.registered-block a:hover{
+    text-decoration: none;
+    color: #1d98b6;
+}
+
+#titleRegister{
+    font-family: 'Roboto Condensed', sans serif;
+}
