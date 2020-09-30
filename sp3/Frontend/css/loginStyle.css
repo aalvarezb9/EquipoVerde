@@ -1,9 +1,9 @@
 #datos{
-    padding-top: 100px;
+    padding-top: 3%;
     margin-left: auto;
     margin-right: auto;
-    width: 545px;
-    height: 607px;
+    /*width: 50%;
+    height: ;*/
     /* border: 1px solid black; */
 }
 
@@ -15,7 +15,7 @@
 .borde-redondo{
     border-radius: 50px !important;
     background-color: #3BB8DF !important;
-    margin-left: 230px !important;
+    padding: 5px 50px;
     border: 1px solid  #3BB8DF !important;
 }
 
@@ -27,4 +27,22 @@
 
 .red{
     color: red !important;
+}
+
+.nombre-proyecto{
+    font-family: 'Roboto', sans-serif !important;
+    color: #3bb8db !important;
+    font-weight: 600 !important;
+    margin-left: 3%;
+    margin-top: 1%;
+    text-shadow: none;
+}
+
+.register-a:hover{
+    text-decoration: none;
+    color: #1d98b6;
+}
+.register-a{
+    text-decoration: none;
+    color: #3bb8db;
 }

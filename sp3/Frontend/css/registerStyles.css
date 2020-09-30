@@ -31,7 +31,7 @@
 
 .register-btn:hover{
     color: white !important;
-    background-color: #1d98b6;
+    background-color: #1e8bac;
 }
 
 .registered-block a{
@@ -41,9 +41,10 @@
 
 .registered-block a:hover{
     text-decoration: none;
-    color: #1d98b6;
+    color: #1e8bac;
 }
 
 #titleRegister{
+    text-align: center;
     font-family: 'Roboto Condensed', sans serif;
 }

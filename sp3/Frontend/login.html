@@ -5,16 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio de sesión</title>
     <link rel="shortcut icon" href="img/icono.jpg"  type="image/x-icon">
-    <link rel="stylesheet" href="css/loginStyle.css">
     <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/loginStyle.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
+    <nav class="navbar navbar-light">
+      <a class="navbar-brand nombre-proyecto" href="index.html">PROYECTO MORAZÁN</a>
+    </nav>
     <div class="container">
         <div class="row">
-            <div id="datos">
-                <h2 id="fuente">Inicio sesión</h2>
+            <div id="datos" class="col-xl-4">
+                <h2 id="fuente">Inicio de sesión</h2>
                 <form>
                     <div class="form-group">
                       <label for="email">Correo electrónico</label>
@@ -28,10 +31,15 @@
                       <input type="password" class="form-control" id="password">
                       <small class="red" id="obligatorio-contra" style="display: none;">Campo obligatorio</small>
                     </div>
-                    <button type="button" onclick="send()" class="btn btn-primary borde-redondo">Iniciar sesión</button>
+                    <div style="text-align: center; margin: 5px 0px">
+                      <button type="button" onclick="send()" class="btn btn-primary borde-redondo">Iniciar sesión</button>
+                    </div>
+                   <section>
+                    ¿No estás registrado/a? 
+                    <a class="register-a" href="register.html">¡Regístrate!</a>
+                   </section>
                   </form>
-                  <h6>¿No estás registrado?</h6>
-                  <a href="">¡Regístrate!</a>
+                  
             </div>
         </div>
     </div>
