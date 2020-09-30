@@ -1,0 +1,57 @@
+[
+    {
+        "name": "Adminis",
+        "lastname": "Trador",
+        "id": 0,
+        "email": "admin@istrador.com",
+        "country": "Honduras",
+        "gender": "--",
+        "institution": "UNAH",
+        "password": "d033e22ae348aeb5660fc2140aec35850c4da997",
+        "imagen": ""
+    },
+    {
+        "name": "Usuario",
+        "lastname": "11",
+        "id": "1",
+        "email": "usuario11@yahoo.com",
+        "country": "Honduras",
+        "gender": "Femenino",
+        "institution": "UNAH",
+        "password": "admin",
+        "image": "ruta"
+    },
+    {
+        "name": "Usuario",
+        "lastname": "2",
+        "id": 2,
+        "email": "usuario2@yahoo.com",
+        "country": "Honduras",
+        "gender": "Masculino",
+        "institution": "UNAH",
+        "password": "d033e22ae348aeb5660fc2140aec35850c4da997",
+        "imagen": ""
+    },
+    {
+        "name": "Usuario",
+        "lastname": "3",
+        "id": 3,
+        "email": "usuario3@yahoo.com",
+        "country": "Honduras",
+        "gender": "Masculino",
+        "institution": "UNAH",
+        "password": "d033e22ae348aeb5660fc2140aec35850c4da997",
+        "imagen": ""
+    },
+    {
+        "name": "Usuario",
+        "lastname": "4",
+        "id": 4,
+        "email": "usuario4@yahoo.com",
+        "country": "Honduras",
+        "gender": "Masculino",
+        "institution": "UNAH",
+        "password": "d033e22ae348aeb5660fc2140aec35850c4da997",
+        "imagen": ""
+    }
+]

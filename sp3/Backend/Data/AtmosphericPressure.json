@@ -1,0 +1,34 @@
+[
+    {
+        "data": 102,
+        "time": {
+            "seconds": 14,
+            "minutes": 21,
+            "hours": 11,
+            "mday": 29,
+            "wday": 2,
+            "mon": 9,
+            "year": 2020,
+            "yday": 272,
+            "weekday": "Tuesday",
+            "month": "September",
+            "0": 1601400074
+        }
+    },
+    {
+        "data": 400,
+        "time": {
+            "seconds": 39,
+            "minutes": 29,
+            "hours": 11,
+            "mday": 29,
+            "wday": 2,
+            "mon": 9,
+            "year": 2020,
+            "yday": 272,
+            "weekday": "Tuesday",
+            "month": "September",
+            "0": 1601400579
+        }
+    }
+]
