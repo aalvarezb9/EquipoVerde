@@ -1,0 +1,21 @@
+.navbar-nav{
+    margin-left: auto;
+}
+
+.nav-link, .navbar-brand, .navbar-toggler-icon{
+    color:white !important;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar-toggler-icon{
+    background-image: none !important;
+    padding-top: 3px;
+}
+
+.nav-link:hover{
+    color: #3BB8DF !important;
+}
+
+.navbar-brand{
+    margin-left: 1rem !important;
+}
