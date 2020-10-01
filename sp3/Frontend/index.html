@@ -13,11 +13,8 @@
   <link rel="shortcut icon" href="img/icono.jpg" type="image/x-icon">
   <script src="https://kit.fontawesome.com/5843da1e4e.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-  crossorigin=""/>
-  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-  crossorigin=""></script>
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
 </head>
 
 <body>
@@ -70,6 +67,10 @@
           <h1>Ubicación del satélite</h1>
           <section id="map-sec">
           </section>
+          <section id="map-sec-2" style="display: none;">
+          </section>
+          <button id="mostrar-orbita" onclick="dinamico()">Dibujar órbita</button>
+          <button id="mostrar-posicion" style="display: none;" onclick="estatico()">Ver posición real</button>
         </div>
       </section>
       <section id="graficos" class="secciones">
@@ -80,6 +81,20 @@
       <section id="twitter" class="secciones">
         <div class="titulo-sections">
           <h1>Cuentas de Twitter que podrían interesarte</h1>
+          <figure style="overflow-y: scroll; height: 600px;" class="figure">
+            <a class="twitter-timeline" href="https://twitter.com/iafastro?ref_src=twsrc%5Etfw">Tweets by
+              iafastro</a>
+          </figure>
+          <figure style="overflow-y: scroll; height: 600px;" class="figure">
+            <a class="twitter-timeline" href="https://twitter.com/CopernicusEU?ref_src=twsrc%5Etfw">Tweets by
+              CopernicusEU</a>
+          </figure>
+          <figure style="overflow-y: scroll; height: 600px;" class="figure">
+            <a class="twitter-timeline" href="https://twitter.com/NASA?ref_src=twsrc%5Etfw">Tweets by NASA</a>
+          </figure>
+          <figure style="overflow-y: scroll; height: 600px;" class="figure">
+            <a class="twitter-timeline" href="https://twitter.com/SpaceX?ref_src=twsrc%5Etfw">Tweets by SpaceX</a>
+          </figure>
         </div>
       </section>
       <section id="acercaDe" class="secciones">
@@ -89,12 +104,17 @@
       </section>
     </div>
   </main>
-  <footer> Copyright &copy; 2020 Equipo Verde, Spacethon - Todos los derechos reservados</footer>
+  <footer style=""> Copyright &copy; 2020 Equipo Verde, Spacethon - Todos los derechos reservados</footer>
 </body>
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
   integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/popper.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
 <script src="js/handlerIndex.js"></script>
 
 </html>

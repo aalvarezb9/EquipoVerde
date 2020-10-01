@@ -11,8 +11,7 @@
                 $_POST["institution"],
                 sha1($_POST["password"]),
                 $_POST["country"],
-                $_POST["gender"],
-                $_POST["image"]
+                $_POST["gender"]
             );
             $user->userExists();
         break;

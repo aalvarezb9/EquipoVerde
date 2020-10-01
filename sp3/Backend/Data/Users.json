@@ -7,8 +7,7 @@
         "country": "Honduras",
         "gender": "--",
         "institution": "UNAH",
-        "password": "d033e22ae348aeb5660fc2140aec35850c4da997",
-        "imagen": ""
+        "password": "d033e22ae348aeb5660fc2140aec35850c4da997"
     },
     {
         "name": "Usuario",
@@ -18,8 +17,7 @@
         "country": "Honduras",
         "gender": "Femenino",
         "institution": "UNAH",
-        "password": "admin",
-        "image": "ruta"
+        "password": "admin"
     },
     {
         "name": "Usuario",
@@ -29,8 +27,7 @@
         "country": "Honduras",
         "gender": "Masculino",
         "institution": "UNAH",
-        "password": "d033e22ae348aeb5660fc2140aec35850c4da997",
-        "imagen": ""
+        "password": "d033e22ae348aeb5660fc2140aec35850c4da997"
     },
     {
         "name": "Usuario",
@@ -40,8 +37,7 @@
         "country": "Honduras",
         "gender": "Masculino",
         "institution": "UNAH",
-        "password": "d033e22ae348aeb5660fc2140aec35850c4da997",
-        "imagen": ""
+        "password": "d033e22ae348aeb5660fc2140aec35850c4da997"
     },
     {
         "name": "Usuario",
@@ -51,7 +47,16 @@
         "country": "Honduras",
         "gender": "Masculino",
         "institution": "UNAH",
-        "password": "d033e22ae348aeb5660fc2140aec35850c4da997",
-        "imagen": ""
+        "password": "d033e22ae348aeb5660fc2140aec35850c4da997"
+    },
+    {
+        "name": "asdasd",
+        "lastname": "asdas",
+        "id": 5,
+        "email": "a@hola.com",
+        "country": "asd",
+        "gender": "Femenino",
+        "institution": "asd",
+        "password": "f10e2821bbbea527ea02200352313bc059445190"
     }
 ]

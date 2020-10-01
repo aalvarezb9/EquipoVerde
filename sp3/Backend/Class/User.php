@@ -9,7 +9,6 @@ header("Content-Type: application/json");
         private $password;
         private $country;
         private $gender;
-        private $image;
 
         public function __construct(
             $name,
@@ -18,8 +17,7 @@ header("Content-Type: application/json");
             $institution,
             $password,
             $country,
-            $gender,
-            $image
+            $gender
         )
         {
             $this->name = $name;
@@ -29,7 +27,6 @@ header("Content-Type: application/json");
             $this->password = $password;
             $this->country = $country;
             $this->gender = $gender;
-            $this->image = $image;
         }
 
         /**
@@ -174,22 +171,7 @@ header("Content-Type: application/json");
         /**
          * Get the value of image
          */ 
-        public function getImage()
-        {
-                return $this->image;
-        }
 
-        /**
-         * Set the value of image
-         *
-         * @return  self
-         */ 
-        public function setImage($image)
-        {
-                $this->image = $image;
-
-                return $this;
-        }
 
         // Funciones relacionadas a la manipulación de información
         public function userExists(){

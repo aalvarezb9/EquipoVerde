@@ -76,3 +76,11 @@ footer{
 #map { 
     height: 180;
 }
+
+#map-sec-2{
+    height: auto;
+}
+
+#margen-arriba{
+    margin-top: 15px !important;
+}
