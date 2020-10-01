@@ -28,7 +28,7 @@ section{
 
 .relleno{
     width: 100%;
-    height: 26%;
+    height: 100%;
     background-color: black; 
     position: absolute;
 }
