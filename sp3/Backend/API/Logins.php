@@ -25,8 +25,10 @@ session_start();
                 $_SESSION["token"] = $result["token"];
                 setcookie("token", $result["token"], time()+(60*60*24*31), "/");
                 setcookie("id", $user["id"], time()+(60*60*24*31), "/");
+                setcookie("name", $user["name"], time()+(60*60*24*31), "/");
                 echo json_encode($result);
             }
+            return $user['name'];
 
         break;
     }

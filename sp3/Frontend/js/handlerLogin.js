@@ -37,8 +37,7 @@ function send(){
             }
         }).then(res => {
             if(res.data.status == "ok"){
-                console.log(res.data);
-                //Se inicia sesión
+                window.location.href="loggedIndex.html"
             }else{
                 alert("Contraseña incorrecta");
                 return false;

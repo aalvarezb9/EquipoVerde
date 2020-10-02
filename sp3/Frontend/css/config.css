@@ -8,12 +8,14 @@
     z-index: 100;
 }
 
-.dropdown-menu{
+.custom-menu{
     min-width: 9rem !important;
     margin: 0.55rem 0 0 !important;
     padding: 0 !important;
+    
 }
 
 .dropdown-item{
     padding: 0.5rem 1rem;
 }
+
