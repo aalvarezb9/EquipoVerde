@@ -56,7 +56,6 @@ function validar(){
             }
         }
     }
-
 }
 
 function registrar(name, lastname, institution, country, email, password, gender){
@@ -74,6 +73,7 @@ function registrar(name, lastname, institution, country, email, password, gender
             gender: gender
         }
     }).then(res => {
+        console.log(res);
         if(res.data.status == "ok"){
             document.getElementById('nombre').value = '';
             document.getElementById('apellido').value = '';

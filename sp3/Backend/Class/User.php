@@ -1,5 +1,7 @@
 <?php
 header("Content-Type: application/json");
+/*include('../API/conexion.php');*/
+
 // include_once('tarjeta/tarjeta.php');
     class User{
         private $name;
@@ -171,7 +173,10 @@ header("Content-Type: application/json");
         /**
          * Get the value of image
          */ 
-
+        public function conexion(){
+            $conexion = mysqli_connect("localhost", "root", "", "proyecto-morazan");
+            return $conexion;
+        }
 
         // Funciones relacionadas a la manipulación de información
         public function userExists(){
@@ -200,20 +205,17 @@ header("Content-Type: application/json");
         }
 
         public function saveUser($id){
-            $content = self::getFile();
-
-            $content[] = array(
-                "name" => $this->name,
-                "lastname" => $this->lastname,
-                "id" => $id,
-                "email" => $this->email,
-                "country" => $this->country,
-                "gender" => $this->gender,
-                "institution" => $this->institution,
-                "password" => $this->password
-            );
-
-            self::write($content);
+            $con=self::conexion();
+            
+            $nombre = $this->name;
+            $apellido = $this->lastname;
+            $email = $this->email;
+            $country = $this->country;
+            $gender = $this->gender;
+            $password = $this->password;
+            $institution =$this->institution;
+            $sql="INSERT INTO usuarios (`name`, `lastname`, `email`, `password`, `country`, `institution`, `gender`, `estado`) VALUES ('$nombre','$apellido','$email', '$password', '$country',  '$institution', '$gender', 'activo')";
+            $con -> query($sql);
         }
 
         public static function getUser($id){
