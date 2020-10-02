@@ -181,30 +181,29 @@ header("Content-Type: application/json");
         // Funciones relacionadas a la manipulación de información
         public function userExists(){
             $emailExists = false;
-            $content = self::getFile();
-
-            if(sizeof($content) == 0){ // Si no hay usuarios registrados, lo crea automáticamente
-                $this->saveUser(sizeof($content));
-                self::ok();
-            }else{ // Si ya hay usuarios, verifica si ese correo ya existe
-                for($i = 0; $i < sizeof($content); $i++){
-                    if($this->email == $content[$i]["email"]){
-                        $emailExists = true;
-                    break;
+            $con=self::conexion();
+            $sql="SELECT * FROM usuarios";
+            $resultado = $con -> query($sql);
+            if($resultado -> num_rows > 0){
+                while($row = $resultado -> fetch_assoc()){
+                    if($this->email==$row["email"]){
+                        $emailExists=true;
+                        break;
                     }
                 }
-    
                 if($emailExists == true){
                     self::nook();
                 }else{
-                    $this->saveUser(sizeof($content));
+                    $this->saveUser();
                     self::ok();
                 }
-            }
-            
+
+            } else{
+                self::ok();
+            }  
         }
 
-        public function saveUser($id){
+        public function saveUser(){
             $con=self::conexion();
             
             $nombre = $this->name;

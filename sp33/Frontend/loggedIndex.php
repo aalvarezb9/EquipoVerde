@@ -125,6 +125,52 @@
           <h1>¡Conócenos!</h1>
           <h3 style="color: black">Somos un equipo integrado por siete estudiantes de cinco carreras diferentes.</h3>
         </div>
+        <div class="container" style="margin-left:auto; margin-right:auto;">
+          <div class="photos row ">
+            <div class="class-xl-3 portrait" style="background-image: url(img/MA.jpeg);">
+              <p class="descripcion">María José Anderson <br>
+                <small>Pasante de Ingeniería Civil </small> <br>
+                <small>contacto: maria.anderson@unah.hn</small>
+              </p>
+            </div>
+            <div class="class-xl-3 portrait" style="background-image: url(img/CC.jpeg);">
+              <p class="descripcion">Christopher Gary Castillo<br>
+                <small>Pasante de Astronomía y Astrofísica</small> <br>
+                <small>contacto: castillo_christopher@unah.hn</small>
+              </p>
+            </div>
+            <div class="class-xl-3 portrait" style="background-image: url(img/WB.jpeg);">
+              <p class="descripcion">Wenceslao Bejarano<br>
+                <small>Pasante de Ingeniería Mecánica Industrial</small> <br>
+                <small>contacto: wenceslao.bejarano@unah.hn</small>
+              </p>
+            </div>
+            <div class="class-xl-3 portrait" style="background-image: url(img/WF.jpeg);">
+              <p class="descripcion">Willians Steven Fernández<br>
+                <small>Pasante de Ingeniería Eléctrica Industrial</small> <br>
+                <small>contacto: willians.fernandez@unah.hn</small>
+              </p>
+            </div>
+            <div class="class-xl-3 portrait" style="background-image: url(img/JW.jpeg);">
+              <p class="descripcion">José Ernest Wainwright<br>
+                <small>Pasante de Ingeniería Mecánica Industrial</small> <br>
+                <small>contacto: jose.wainwrigth@unah.hn</small>
+              </p>
+            </div>
+            <div class="class-xl-3 portrait" style="background-image: url(img/MP.jpg);">
+              <p class="descripcion">María Fernanda Pineda<br>
+                <small>Pasante de Ingeniería en Sistemas</small> <br>
+                <small>contacto: mfpineda@unah.hn</small>
+              </p>
+              </div>
+            <div class="class-xl-3 portrait" style="background-image: url(img/AA.jpeg);">
+              <p class="descripcion">Ángel Rene Álvarez<br>
+                <small>Pasante de Ingeniería en Sistemas</small> <br>
+                <small>contacto: aalvarezb@unah.hn</small>
+              </p>
+              </div>
+          </div>
+        </div>
       </section>
     </div>
   </main>
