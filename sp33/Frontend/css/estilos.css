@@ -1,0 +1,87 @@
+/*main, html, body{
+    height: 100%;
+}*/
+
+
+body{
+    margin: 0;
+}
+
+section{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    color:white;
+    padding: 4rem 0;
+}
+
+.secciones{
+    padding: 4rem 5rem;
+}
+
+.custom-nav{
+    background-color: rgba(0, 0, 0, 0.5) !important; 
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.relleno{
+    width: 100%;
+    height: 100%;
+    background-color: black; 
+    position: absolute;
+}
+
+
+#satelite{
+    background-image: url(../img/satelite.jpg);
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 75%;
+    top:25%;
+}
+
+.descripcionProyecto{
+    padding-top: 2%;
+    padding-right:5%;
+    padding-left:8%;
+}
+
+.descripcionProyecto h1{
+    font-family: 'Roboto', sans-serif;
+}
+
+.titulo-sections{
+    margin-top: 1rem;
+    color: #3bb8df;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-bottom: 2rem;
+}
+
+footer{
+    color: white;
+    width: 100%;
+    height: 70px;
+    background-color: #3bb8db;
+    text-align: center;
+    padding-top: 1.5%;
+}
+
+#map-sec{
+    /* border: 1px solid black; */
+    height: auto;
+}
+
+#map { 
+    height: 180;
+}
+
+#map-sec-2{
+    height: auto;
+}
+
+#margen-arriba{
+    margin-top: 15px !important;
+}

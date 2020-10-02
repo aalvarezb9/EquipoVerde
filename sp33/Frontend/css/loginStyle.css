@@ -1,0 +1,48 @@
+#datos{
+    padding-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    /*width: 50%;
+    height: ;*/
+    /* border: 1px solid black; */
+}
+
+#fuente{
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.borde-redondo{
+    border-radius: 50px !important;
+    background-color: #3BB8DF !important;
+    padding: 5px 50px;
+    border: 1px solid  #3BB8DF !important;
+}
+
+.borde-redondo:hover{
+    background-color: #1e8bac !important;
+    border: 1px solid  #1e8bac !important;
+    transition: .7s;
+}
+
+.red{
+    color: red !important;
+}
+
+.nombre-proyecto{
+    font-family: 'Roboto', sans-serif !important;
+    color: #3bb8db !important;
+    font-weight: 600 !important;
+    margin-left: 3%;
+    margin-top: 1%;
+    text-shadow: none;
+}
+
+.register-a:hover{
+    text-decoration: none;
+    color: #1d98b6;
+}
+.register-a{
+    text-decoration: none;
+    color: #3bb8db;
+}
