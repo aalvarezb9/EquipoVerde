@@ -10,6 +10,18 @@ function leerCookie(namee) {
     }
     return "";
 }
+function habilitarEdicion(){
+    document.getElementById('nombre').disabled=false;
+    document.getElementById('apellido').disabled=false;
+    document.getElementById('institucion').disabled=false;
+    document.getElementById('pais').disabled=false;
+    document.getElementById('email').disabled=false;
+    document.getElementById('confirm-email').disabled=false;
+    document.getElementById('password').disabled=false;
+    document.getElementById('confirm-password').disabled=false;
+    document.getElementById('Masculino').disabled=false;
+    document.getElementById('Femenino').disabled=false;
+}
 
 function cargarDatos(){
     axios({
@@ -114,9 +126,38 @@ function actualizar(name, lastname, institution, country, email, password, gende
             }
         }
     }).then(res => {
+        document.getElementById('success').innerHTML="";
+        document.getElementById('success').textContent="Datos actualizados exitosamente.";
+        document.getElementById('success').classList.add('green');
 
     }).catch(err => {
-        
+        document.getElementById('success').innerHTML="";
+        document.getElementById('success').textContent="Se produjo un error, inténtelo nuevamente";
+        document.getElementById('success').classList.add('red');
     })
 }
 
+function cancelar(){
+    document.getElementById('nombre').disabled=true;
+    document.getElementById('apellido').disabled=true;
+    document.getElementById('institucion').disabled=true;
+    document.getElementById('pais').disabled=true;
+    document.getElementById('email').disabled=true;
+    document.getElementById('confirm-email').disabled=true;
+    document.getElementById('password').disabled=true;
+    document.getElementById('confirm-password').disabled=true;
+    document.getElementById('Masculino').disabled=true;
+    document.getElementById('Femenino').disabled=true;
+}
+
+function eliminarCuenta(){
+    axios({
+        method: 'DELETE',
+        url: url+'?id='+leerCookie("id"),
+        responseType: 'json'
+    }).then(res=> {
+        window.location.href="index.html"
+    }).catch(err=>{
+        console.log("se produjo un error");
+    })
+}

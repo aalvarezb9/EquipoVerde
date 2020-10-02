@@ -228,9 +228,10 @@ header("Content-Type: application/json");
         }
 
         public static function deleteUser($id){
-            $users = self::getFile();
-
-            array_splice($users, $id, 1);
+            $con = self::conexion();
+            $sql = "DELETE FROM `usuarios` WHERE `id`='$id'";
+            $con ->query($sql);
+            /*array_splice($users, $id, 1);
             $users = self::updateIds($id, $users);
 
             self::write($users);
@@ -239,7 +240,7 @@ header("Content-Type: application/json");
                 self::ok();
             }else{
                 self::nook();
-            }
+            }*/
 
         }
 
@@ -252,21 +253,26 @@ header("Content-Type: application/json");
         }
 
         public static function updateUser($id, $newData){
-            $users = self::getFile();
+            $con=self::conexion();
+            $nombre = $newData["name"];
+            $apellido = $newData["lastname"];
+            $email = $newData["email"];
+            $country = $newData["country"];
+            $gender = $newData["gender"];
+            $password = sha1($newData["password"]);
+            $institution =$newData["institution"];
 
-            $users[(int)$id] = array(
-                "name" => $newData["name"],
-                "lastname" => $newData["lastname"],
-                "id" => $id,
-                "email" => $newData["email"],
-                "country" => $newData["country"],
-                "gender" => $newData["gender"],
-                "institution" => $newData["institution"],
-                "password" =>$newData["password"],
-                "image" => $newData["image"]
-            );
-        
-            self::write($users);
+            $sql= "UPDATE usuarios 
+                SET `name`='$nombre',
+                `lastname`='$apellido',
+                `email`='$email', 
+                `country`='$country', 
+                `gender`='$gender', 
+                `password`='$password', 
+                `institution`='$institution' 
+                WHERE `id`='$id'";
+
+            $con->query($sql);
         }
 
         public static function getFile(){

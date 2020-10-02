@@ -70,51 +70,51 @@
     <div class="row centrar-form col-xl-6">
       <div class="col-12">
         <strong>Datos generales</strong>
-        <button class="edit-btn" type="button">Editar</button>
+        <button class="edit-btn" type="button" onclick="habilitarEdicion()">Editar</button>
         <hr>
       </div>
       <div class="col-xl-6 col-md-6 col-sm-12">
         <label for="" class="col-form-label">Nombre</label>
-        <input id="nombre" type="text" class="form-control">
+        <input id="nombre" type="text" class="form-control" disabled>
       </div>
       <div class="col-xl-6 col-md-6 col-sm-12">
         <label for="" class="col-form-label">Apellido</label>
-        <input id="apellido" type="text" class="form-control">
+        <input id="apellido" type="text" class="form-control" disabled>
       </div>
       <div class="col-xl-6 col-md-6 col-sm-12">
         <label for="" class="col-form-label">Institución</label>
-        <input id="institucion" type="text" class="form-control">
+        <input id="institucion" type="text" class="form-control" disabled>
       </div>
       <div class="col-xl-6 col-md-6 col-sm-12">
         <label for="" class="col-form-label">País</label>
-        <input id="pais" type="text" class="form-control">
+        <input id="pais" type="text" class="form-control" disabled>
       </div>
       <div class="col-xl-6 col-md-6 col-sm-12">
         <label for="" class="col-form-label">Correo electrónico</label>
-        <input id="email" type="text" class="form-control">
+        <input id="email" type="text" class="form-control" disabled>
       </div>
       <div class="col-xl-6 col-md-6 col-sm-12">
         <label for="" class="col-form-label">Confirmar correo electrónico</label>
-        <input id="confirm-email" type="text" class="form-control">
+        <input id="confirm-email" type="text" class="form-control" disabled>
       </div>
       <div class="col-xl-6 col-md-6 col-sm-12">
         <label for="" class="col-form-label">Contraseña</label>
-        <input id="password" type="password" class="form-control">
+        <input id="password" type="password" class="form-control" disabled>
       </div>
       <div class="col-xl-6 col-md-6 col-sm-12">
         <label for="" class="col-form-label">Confirmar contraseña</label>
-        <input id="confirm-password" type="password" class="form-control">
+        <input id="confirm-password" type="password" class="form-control" disabled>
       </div>
       <div class="col-12">
         <label for="" class="col-form-label">Género</label>
         <div class="form-check">
           <input id="Masculino" class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
-            value="Masculino">
+            value="Masculino" disabled>
           <label class="form-check-label" for="exampleRadios2" style="width: 100px;">
             Masculino
           </label>
           <input id="Femenino" class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
-            value="Femenino">
+            value="Femenino" disabled>
           <label class="form-check-label" for="exampleRadios2">
             Femenino
           </label>
@@ -122,18 +122,35 @@
         </div>
       </div>
       <br><br>
+      <div>
+        <small style="color: green;" id="success"></small>
+        </div>
       <div class="col-xl-12 col-md-12 registered-block">
-        <button type="button" class="btn register-btn config-btn cancel-btn">Cancelar</button>
         <button onclick="validar()" type="button" class="btn register-btn config-btn">Guardar cambios</button>
+        <button onclick="cancelar()" type="button" class="btn register-btn config-btn cancel-btn">Cancelar</button>
       </div>
       <div class="col-12">
           <strong>Gestión de cuenta</strong>
           <hr>
       </div>
       <div class="col-xl-12 col-md-12 col-sm-12" style="margin-top: 10px;">
-        <span>Desactivar cuenta</span>
-        <button type="button" class="btn  register-btn config-btn">Desactivar</button>
+        <span>Eliminar cuenta</span>
+        <button type="button" class="btn  register-btn config-btn" data-toggle="modal" data-target="#eliminarCuenta">Eliminar</button>
     </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="eliminarCuenta" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            ¿Estás seguro/a de querer eliminar tu cuenta?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn register-btn config-btn cancel-btn" data-dismiss="modal">Cerrar</button>
+            <button onclick="eliminarCuenta()" type="button" class="btn register-btn config-btn">Estoy seguro/a</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
