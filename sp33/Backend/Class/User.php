@@ -201,7 +201,7 @@ header("Content-Type: application/json");
                     self::ok();
                 }
             }
-
+            
         }
 
         public function saveUser($id){
@@ -231,16 +231,6 @@ header("Content-Type: application/json");
             $con = self::conexion();
             $sql = "DELETE FROM `usuarios` WHERE `id`='$id'";
             $con ->query($sql);
-            /*array_splice($users, $id, 1);
-            $users = self::updateIds($id, $users);
-
-            self::write($users);
-
-            if($users != null){
-                self::ok();
-            }else{
-                self::nook();
-            }*/
 
         }
 

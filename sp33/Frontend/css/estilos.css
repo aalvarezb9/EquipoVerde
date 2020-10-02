@@ -85,3 +85,44 @@ footer{
 #margen-arriba{
     margin-top: 15px !important;
 }
+
+.portrait{
+    height: 250px;
+    width: 250px;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-size: cover;
+}
+
+
+.photos{
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+
+.portrait:hover{
+    transform: scale(1.2,1.2);
+}
+
+.descripcion{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding-left: 5px;
+    margin-top: 71.5%;
+}
+
+#team{
+    font-family: 'Roboto', sans-serif;
+    color: #3bb8db;
+}
+
+.nameTeam{
+    height: 250px;
+    width: 250px;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 9% 0%;
+}
