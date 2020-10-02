@@ -53,6 +53,7 @@
         }
         
         public function verify($data, $type, $status){
+            
             $location = '';
             if($type == "Temperature"){
                 $location = '../Data/Temperature.json';
