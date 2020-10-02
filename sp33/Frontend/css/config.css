@@ -22,3 +22,33 @@
 .red{
     color: red !important;
 }
+
+hr{
+    margin-top: 0.5rem !important;
+    margin-bottom: 0 !important;
+}
+
+.edit-btn{
+    border:none; 
+    background-color: white; 
+    color: #3bb8db;
+}
+
+.edit-btn:hover{
+    color: #1d98b6;
+}
+
+.config-btn{
+    margin: 0 5px;
+    padding: 5px 25px;
+}
+
+.cancel-btn{
+    background-color: #c4c4c4;
+    border: 2px solid #c4c4c4;
+    padding: 5px 30px;
+}
+
+.cancel-btn:hover{
+    background-color: #9c9797;
+}

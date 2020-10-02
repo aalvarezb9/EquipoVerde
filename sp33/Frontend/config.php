@@ -70,6 +70,7 @@
     <div class="row centrar-form col-xl-6">
       <div class="col-12">
         <strong>Datos generales</strong>
+        <button class="edit-btn" type="button">Editar</button>
         <hr>
       </div>
       <div class="col-xl-6 col-md-6 col-sm-12">
@@ -121,8 +122,18 @@
         </div>
       </div>
       <br><br>
-      <div class="col-xl-6 col-md-12 registered-block">
-        <button onclick="validar()" type="button" class="btn register-btn">Guardar cambios</button>
+      <div class="col-xl-12 col-md-12 registered-block">
+        <button type="button" class="btn register-btn config-btn cancel-btn">Cancelar</button>
+        <button onclick="validar()" type="button" class="btn register-btn config-btn">Guardar cambios</button>
+      </div>
+      <div class="col-12">
+          <strong>Gestión de cuenta</strong>
+          <hr>
+      </div>
+      <div class="col-xl-12 col-md-12 col-sm-12" style="margin-top: 10px;">
+        <span>Desactivar cuenta</span>
+        <button type="button" class="btn  register-btn config-btn">Desactivar</button>
+    </div>
       </div>
     </div>
   </div>
