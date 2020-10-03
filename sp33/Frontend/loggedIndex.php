@@ -47,9 +47,6 @@
           <a class="nav-link" href="#mapa">MAPA</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#graficos">GRÁFICOS</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" href="#twitter">TWITTER</a>
         </li>
         <li class="nav-item">
@@ -90,11 +87,6 @@
           <button id="mostrar-orbita" onclick="dinamico()">Dibujar órbita</button>
           <button id="mostrar-posicion" style="display: none;" onclick="estatico()">Ver posición real</button>
           <button id="ver-datos" onclick="verDatos()">Ver datos</button>
-        </div>
-      </section>
-      <section id="graficos" class="secciones">
-        <div class="titulo-sections">
-          <h1>Estadísticas de descarga de datos</h1>
         </div>
       </section>
       <section id="twitter" class="secciones">
@@ -152,9 +144,9 @@
               </p>
             </div>
             <div class="class-xl-3 portrait" style="background-image: url(img/JW.jpeg);">
-              <p class="descripcion">José Ernest Wainwrigth<br>
+              <p class="descripcion">José Ernest Wainwright<br>
                 <small>Pasante de Ingeniería Mecánica Industrial</small> <br>
-                <small>contacto: jose.wainwrigth@unah.hn</small>
+                <small>contacto: jose.wainwright@unah.hn</small>
               </p>
             </div>
             <div class="class-xl-3 portrait" style="background-image: url(img/MP.jpg);">
