@@ -89,6 +89,7 @@
           </section>
           <button id="mostrar-orbita" onclick="dinamico()">Dibujar órbita</button>
           <button id="mostrar-posicion" style="display: none;" onclick="estatico()">Ver posición real</button>
+          <button id="ver-datos" onclick="verDatos()">Ver datos</button>
         </div>
       </section>
       <section id="graficos" class="secciones">
@@ -124,8 +125,7 @@
         <div class="titulo-sections">
           <h1>¡Conócenos!</h1>
           <h3 style="color: black">Somos un equipo integrado por siete estudiantes de cinco carreras diferentes.</h3>
-        </div>
-        <div class="container" style="margin-left:auto; margin-right:auto;">
+          <div class="container" style="margin-left:auto; margin-right:auto;">
           <div class="photos row ">
             <div class="class-xl-3 portrait" style="background-image: url(img/MA.jpeg);">
               <p class="descripcion">María José Anderson <br>
@@ -152,7 +152,7 @@
               </p>
             </div>
             <div class="class-xl-3 portrait" style="background-image: url(img/JW.jpeg);">
-              <p class="descripcion">José Ernest Wainwright<br>
+              <p class="descripcion">José Ernest Wainwrigth<br>
                 <small>Pasante de Ingeniería Mecánica Industrial</small> <br>
                 <small>contacto: jose.wainwrigth@unah.hn</small>
               </p>
@@ -162,17 +162,82 @@
                 <small>Pasante de Ingeniería en Sistemas</small> <br>
                 <small>contacto: mfpineda@unah.hn</small>
               </p>
-              </div>
+            </div>
             <div class="class-xl-3 portrait" style="background-image: url(img/AA.jpeg);">
               <p class="descripcion">Ángel Rene Álvarez<br>
                 <small>Pasante de Ingeniería en Sistemas</small> <br>
                 <small>contacto: aalvarezb@unah.hn</small>
               </p>
-              </div>
+            </div>
           </div>
+        </div>
         </div>
       </section>
     </div>
+
+        <!-- Ventana modal de datos -->
+    <!-- Modal -->
+    <div class="modal fade" id="modal-datos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true" style="overflow-y: scroll;">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Datos recogidos <i class="fas fa-satellite"></i></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <table class="table" border="1">
+              <thead>
+                <th>Tipo</th>
+                <th>Dato</th>
+                <th>Hora</th>
+              </thead>
+              <tbody>
+              <tr>
+                  <td>Temperatura</td>
+                  <td id="temp-dato"></td>
+                  <td id="temp-hora"></td>
+                </tr>
+                <tr>
+                  <td>Presión atmosférica</td>
+                  <td id="pres-dato"></td>
+                  <td id="pres-hora"></td>
+                </tr>
+                <tr>
+                  <td>Altura del río</td>
+                  <td id="altu-dato"></td>
+                  <td id="altu-hora"></td>
+                </tr>
+                <tr>
+                  <td>Caudal</td>
+                  <td id="caud-dato"></td>
+                  <td id="caud-hora"></td>
+                </tr>
+                <tr>
+                  <td>Precipitación</td>
+                  <td id="prec-dato"></td>
+                  <td id="prec-hora"></td>
+                </tr>
+              </tbody>
+            </table>
+            <small>Velocidad del satélite: <span id="velocidad"></span></small><br>
+            <small>Altura del satélite: <span id="altura"></span></small><br>
+            <label for="date">Filtra por fecha</label>
+            <input type="date" name="date" id="date" min="2020-01-01" max="2020-12-03"><br>
+            <label for="hour">Filtra por hora</label>
+            <input type="time" name="hour" id="hour">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            <button type="button" onclick="filtrar()" class="btn btn-primary">Filtrar</button>
+            <button type="button" onclick="descargar()" class="btn btn-primary">Descargar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </main>
   <footer> Copyright &copy; 2020 Equipo Verde, Spacethon - Todos los derechos reservados</footer>
 </body>

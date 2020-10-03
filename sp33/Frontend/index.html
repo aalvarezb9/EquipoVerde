@@ -15,10 +15,9 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
     crossorigin="" />
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 
-<body onload="drawChart()">
+<body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light custom-nav">
     <a class="navbar-brand" href="#">PROYECTO MORAZÁN</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -70,15 +69,17 @@
           </section>
           <section id="map-sec-2" style="display: none;">
           </section>
-          <button id="mostrar-orbita" onclick="dinamico()">Dibujar órbita</button>
+          <button id="mostrar-orbita" onclick="dinamico()">Ver órbita</button>
           <button id="mostrar-posicion" style="display: none;" onclick="estatico()">Ver posición real</button>
+          <button id="ver-datos" onclick="verDatos()">Ver datos</button>
+          <!-- <button id="ver-orbita" onclick="dibujarOrbita()" style="display: none;">Dibujar órbita</button> -->
+          <!-- <button id="ocultar-orbita" onclick="ocultarOrbita()" style="display: none;">Ocultar órbita</button> -->
         </div>
       </section>
       <section id="graficos" class="secciones">
         <div class="titulo-sections">
           <h1>Estadísticas de descarga de datos</h1>
         </div>
-        <div id="piechart" style="width: 100%; height: 600px; text-align: -webkit-center;"></div>
       </section>
       <section id="twitter" class="secciones">
         <div class="titulo-sections">
@@ -135,7 +136,7 @@
               </p>
             </div>
             <div class="class-xl-3 portrait" style="background-image: url(img/JW.jpeg);">
-              <p class="descripcion">José Ernest Wainwright<br>
+              <p class="descripcion">José Ernest Wainwrigth<br>
                 <small>Pasante de Ingeniería Mecánica Industrial</small> <br>
                 <small>contacto: jose.wainwrigth@unah.hn</small>
               </p>
@@ -145,18 +146,77 @@
                 <small>Pasante de Ingeniería en Sistemas</small> <br>
                 <small>contacto: mfpineda@unah.hn</small>
               </p>
-              </div>
+            </div>
             <div class="class-xl-3 portrait" style="background-image: url(img/AA.jpeg);">
               <p class="descripcion">Ángel Rene Álvarez<br>
                 <small>Pasante de Ingeniería en Sistemas</small> <br>
                 <small>contacto: aalvarezb@unah.hn</small>
               </p>
-              </div>
+            </div>
           </div>
         </div>
-        
+
       </section>
     </div>
+
+    <!-- Ventana modal de datos -->
+    <!-- Modal -->
+    <div class="modal fade" id="modal-datos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true" style="overflow-y: scroll;">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Datos recogidos <i class="fas fa-satellite"></i></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <table class="table" border="1">
+              <thead>
+                <th>Tipo</th>
+                <th>Dato</th>
+                <th>Hora</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Temperatura</td>
+                  <td id="temp-"></td>
+                  <td id="temp-"></td>
+                </tr>
+                <tr>
+                  <td>Presión atmosférica</td>
+                  <td id="pres-dato"></td>
+                  <td id="pres-hora"></td>
+                </tr>
+                <tr>
+                  <td>Altura del río</td>
+                  <td id="altu-dato"></td>
+                  <td id="altu-hora"></td>
+                </tr>
+                <tr>
+                  <td>Caudal</td>
+                  <td id="caud-dato"></td>
+                  <td id="caud-hora"></td>
+                </tr>
+                <tr>
+                  <td>Precipitación</td>
+                  <td id="prec-dato"></td>
+                  <td id="prec-hora"></td>
+                </tr>
+              </tbody>
+            </table>
+            <small>Velocidad del satélite: <span id="velocidad"></span></small><br>
+            <small>Altura del satélite: <span id="altura"></span></small>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            <button type="button" onclick="redirigirLogin()" class="btn btn-primary">Descargar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </main>
   <footer> Copyright &copy; 2020 Equipo Verde, Spacethon - Todos los derechos reservados</footer>
 </body>

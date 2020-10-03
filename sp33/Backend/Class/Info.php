@@ -102,7 +102,6 @@
         }
 
         public static function getData($fecha, $hora){
-
             $con= self::conexion();
             $sql="SELECT * FROM datos WHERE fecha='$fecha' and hora='$hora'";
             $resultado= $con ->query($sql);
@@ -110,8 +109,23 @@
             while($row = $resultado ->fetch_assoc()){
                 $data[]=$row;
             }
-            
-            return $data;
+
+            echo json_encode($data[0]);
         }
+
+
+        public static function obtenerTodo(){
+            $con= self::conexion();
+            $sql="SELECT * FROM datos";
+            $resultado= $con ->query($sql);
+            $data = array();
+            while($row = $resultado ->fetch_assoc()){
+                $data[]=$row;
+            }
+
+            echo json_encode($data);
+        }
+
+
     }
 ?>

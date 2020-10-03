@@ -184,7 +184,7 @@ header("Content-Type: application/json");
             $con=self::conexion();
             $sql="SELECT * FROM usuarios";
             $resultado = $con -> query($sql);
-            if($resultado -> num_rows > 0){
+            if($resultado->num_rows > 0){
                 while($row = $resultado -> fetch_assoc()){
                     if($this->email==$row["email"]){
                         $emailExists=true;
@@ -230,7 +230,6 @@ header("Content-Type: application/json");
             $con = self::conexion();
             $sql = "DELETE FROM `usuarios` WHERE `id`='$id'";
             $con ->query($sql);
-
         }
 
         public static function updateIds($id, $users){
@@ -260,8 +259,15 @@ header("Content-Type: application/json");
                 `password`='$password', 
                 `institution`='$institution' 
                 WHERE `id`='$id'";
-
             $con->query($sql);
+
+            // if($sql){
+            //     self::ok();
+            // }else{
+            //     self::nook();
+            // }
+
+            echo $con->query($sql);
         }
 
         public static function getFile(){

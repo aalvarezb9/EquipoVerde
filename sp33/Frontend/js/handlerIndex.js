@@ -1,8 +1,7 @@
 const tilesProvider = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
 const tilesProvider2 = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
-const url="../Backend/API/Infos.php"
 var tiempos = [];
-
+const urlInfo = '../Backend/API/Infos.php';
 var mymap = L.map('map-sec').setView([51.505, -0.09], 2.3);
 var mymap2 = L.map('map-sec-2').setView([51.505, -0.09], 2.3);
 
@@ -35,6 +34,13 @@ var iconSat = L.icon({
     iconSize: [20, 20],
     iconAnchor: [20, 20]
 });
+
+// var ruta = L.icon({
+//     iconUrl: 'img/ruta.svg',
+//     iconSize: [5, 5],
+//     iconAnchor: [5, 5]
+// });
+
 L.marker([14.087097, -87.159390], {icon: iconSat}).addTo(mymap);
 
 function movSatellite(lon, lat){
@@ -74,11 +80,21 @@ function arrSat(){
 
 setInterval(arrSat, 30000);
 
+// var mark;
+// function dibujarRuta(){
+//     for(let i = 0; i < tiempos.length; i++){
+//         L.marker([longitud(tiempos[i]), latitud(tiempos[i])], {icon: ruta}).addTo(mymap2);
+//     }
+// }
+
+
+
 function dinamico(){
     document.getElementById('mostrar-posicion').setAttribute('style', 'display: block');
     document.getElementById('mostrar-orbita').setAttribute('style', 'display: none');
     document.getElementById('map-sec').setAttribute('style', 'display: none');
     document.getElementById('map-sec-2').setAttribute('style', 'display: block');
+    // document.getElementById('ver-orbita').setAttribute('style', 'display: block');
 }
 
 function estatico(){
@@ -86,7 +102,36 @@ function estatico(){
     document.getElementById('mostrar-orbita').setAttribute('style', 'display: block');
     document.getElementById('map-sec').setAttribute('style', 'display: block');
     document.getElementById('map-sec-2').setAttribute('style', 'display: none');
+    // document.getElementById('ver-orbita').setAttribute('style', 'display: none');
+    // document.getElementById('ocultar-orbita').setAttribute('style', 'display: none');
 }
+
+function cargarDatos(){
+    axios({
+
+    })
+}
+
+function verDatos(){
+    $("#modal-datos").modal('show');
+}
+
+function redirigirLogin(){
+    alert("Tienes que iniciar sesión para descargar los datos");
+    window.location.href = 'login.html';
+    return false;
+}
+// function dibujarOrbita(){
+//     document.getElementById('ver-orbita').setAttribute('style', 'display: none');
+//     document.getElementById('ocultar-orbita').setAttribute('style', 'display: block');
+//     dibujarRuta();
+// }
+
+// function ocultarOrbita(){
+//     document.getElementById('ver-orbita').setAttribute('style', 'display: block');
+//     document.getElementById('ocultar-orbita').setAttribute('style', 'display: none');
+//     mymap2.removeLayer(mark);
+// }
 
 // 1. Obtengo tu hora
 // 2. Esa hora será mi valor inicial
@@ -101,28 +146,3 @@ function estatico(){
 //Altura -> 700 km
 //Velocidad -> 7.51 km/S, 4.67 mi/s
 //Energía orbital -> 28.1855 J/kg
-
-
-//Charts
-google.charts.load('current', {'packages':['corechart']});
-google.charts.setOnLoadCallback(drawChart);
-
-function drawChart() {
-
-var data = google.visualization.arrayToDataTable([
-    ['Instituciones', 'Descargas por institución'],
-    ['Work',     11],
-    ['Eat',      2],
-    ['Commute',  2],
-    ['Watch TV', 2],
-    ['Sleep',    7]
-    ]);
-
-    var options = {
-        title: 'My Daily Activities'
-    };
-
-    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-    chart.draw(data, options);
-};

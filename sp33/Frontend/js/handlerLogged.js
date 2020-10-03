@@ -1,5 +1,6 @@
 
 const url = '../Backend/API/Users.php';
+const urlDatos = '../Backend/API/Infos.php';
 
 const tilesProvider = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
 const tilesProvider2 = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
@@ -37,16 +38,16 @@ var iconSat = L.icon({
     iconSize: [20, 20],
     iconAnchor: [20, 20]
 });
-L.marker([14.087097, -87.159390], {icon: iconSat}).addTo(mymap);
+L.marker([14.087097, -87.159390], { icon: iconSat }).addTo(mymap);
 
-function movSatellite(lon, lat){
-    L.marker([lon, lat], {icon: iconSat}).addTo(mymap2);
+function movSatellite(lon, lat) {
+    L.marker([lon, lat], { icon: iconSat }).addTo(mymap2);
 }
 
 
-function llenarTiempo(){
+function llenarTiempo() {
     let i = 0;
-    while(i < 5917){
+    while (i < 5917) {
         tiempos.push(i);
         i += 30;
     }
@@ -57,33 +58,89 @@ var iterador = tiempos[0];
 // setInterval(llenarTiempo, 10000);
 
 
-function latitud(time){
-    return -87.159390 + (time/240);
+function latitud(time) {
+    return -87.159390 + (time / 240);
 }
 
-function longitud(time){
-    return 14.087097 + (time/240);
+function longitud(time) {
+    return 14.087097 + (time / 240);
 }
 
-function arrSat(){
+function arrSat() {
     iterador = iterador + 1;
-    if(iterador < tiempos.length){
+    if (iterador < tiempos.length) {
         movSatellite(longitud(tiempos[iterador]), latitud(tiempos[iterador]));
-    }else{
+    } else {
         iterador = 0;
     }
 }
 
 setInterval(arrSat, 30000);
 
-function dinamico(){
+function verDatos() {
+    $("#modal-datos").modal('show');
+}
+
+function cargarFechas() {
+    axios({
+        method: 'GET',
+        url: urlDatos + '?id=all',
+        responseType: 'json'
+    }).then(res => {
+
+    }).catch(err => {
+
+    })
+}
+
+var horas = [];
+function enviar(hora, fecha) {
+    // console.log(hora);
+    // console.log(fecha);
+    axios({
+        method: 'GET',
+        url: urlDatos,
+        responseType: 'json',
+    }).then(res => {
+        horas = res.data;
+        console.log(horas);
+    }).catch(err => {
+        console.log(err);
+    })
+}
+
+enviar();
+
+function filtrar() {
+    let hora = document.getElementById('hour').value;
+    let fecha = document.getElementById('date').value;
+    for(let i = 0; i < horas.length; i++){
+        if(hora == horas[i].hora || fecha == horas[i].fecha){
+            console.log(horas[i]);
+            document.getElementById('temp-dato').textContent = horas[i].temperatura;
+            document.getElementById('temp-hora').textContent = horas[i].hora + ' - ' + horas[i].fecha;
+            document.getElementById('pres-dato').textContent = horas[i].presionAtmosferica;
+            document.getElementById('pres-hora').textContent = horas[i].hora + ' - ' + horas[i].fecha;
+            document.getElementById('altu-dato').textContent = horas[i].alturaRio;
+            document.getElementById('altu-hora').textContent = horas[i].hora + ' - ' + horas[i].fecha;
+            document.getElementById('caud-dato').textContent = horas[i].caudal;
+            document.getElementById('caud-hora').textContent = horas[i].hora + ' - ' + horas[i].fecha;
+            document.getElementById('prec-dato').textContent = horas[i].precipitacion;
+            document.getElementById('prec-hora').textContent = horas[i].hora + ' - ' + horas[i].fecha;
+            break;
+        }
+    }
+}
+
+
+function dinamico() {
     document.getElementById('mostrar-posicion').setAttribute('style', 'display: block');
     document.getElementById('mostrar-orbita').setAttribute('style', 'display: none');
     document.getElementById('map-sec').setAttribute('style', 'display: none');
     document.getElementById('map-sec-2').setAttribute('style', 'display: block');
 }
 
-function estatico(){
+function estatico() {
     document.getElementById('mostrar-posicion').setAttribute('style', 'display: none');
     document.getElementById('mostrar-orbita').setAttribute('style', 'display: block');
     document.getElementById('map-sec').setAttribute('style', 'display: block');
@@ -94,22 +151,22 @@ function leerCookie(namee) {
     let name = namee + "=";
     let ca = document.cookie.split(';');
     for (let i = 0; i < ca.length; i++) {
-      let c = ca[i];
-      while (c.charAt(0) == ' ') c = c.substring(1);
-      if (c.indexOf(name) == 0) return unescape(c.substring(name.length, c.length));
+        let c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1);
+        if (c.indexOf(name) == 0) return unescape(c.substring(name.length, c.length));
     }
     return "";
 }
 
-function cargarNombre(){
+function cargarNombre() {
     axios({
         method: 'GET',
         url: url + '?id=' + leerCookie("id"),
         responseType: 'json'
     }).then(res => {
-        if(res.data.name != false || res.data.name != null){
+        if (res.data.name != false || res.data.name != null) {
             document.getElementById("userName").textContent = `HOLA, ${res.data.name.toUpperCase()}`;
-        }else{
+        } else {
             alert("Error");
             return false;
         }

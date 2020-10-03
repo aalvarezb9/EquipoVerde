@@ -158,6 +158,7 @@ function eliminarCuenta(){
     }).then(res=> {
         window.location.href="index.html"
     }).catch(err=>{
-        console.log("se produjo un error");
+        alert("Se produjo un error");
+        return false;
     })
 }

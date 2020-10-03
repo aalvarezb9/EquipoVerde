@@ -31,7 +31,7 @@
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light custom-nav-config">
-    <a class="navbar-brand" href="loggedIndex.html">PROYECTO MORAZÁN</a>
+    <a class="navbar-brand" href="loggedIndex.php">PROYECTO MORAZÁN</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
       aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
@@ -39,19 +39,19 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="loggedIndex.html#inicio">INICIO</span></a>
+          <a class="nav-link" href="loggedIndex.php#inicio">INICIO</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="loggedIndex.html#mapa">MAPA</a>
+          <a class="nav-link" href="loggedIndex.php#mapa">MAPA</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="loggedIndex.html#graficos">GRÁFICOS</a>
+          <a class="nav-link" href="loggedIndex.php#graficos">GRÁFICOS</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="loggedIndex.html#twitter">TWITTER</a>
+          <a class="nav-link" href="loggedIndex.php#twitter">TWITTER</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="loggedIndex.html#acercaDe">ACERCA DE</a>
+          <a class="nav-link" href="loggedIndex.php#acercaDe">ACERCA DE</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="userName" role="button" data-toggle="dropdown"

@@ -83,9 +83,9 @@ function registrar(name, lastname, institution, country, email, password, gender
             document.getElementById('confirm-email').value = '';
             document.getElementById('password').value = '';
             document.getElementById('confirm-password').value = '';
-            // alert("Usuario registrado con éxito");
+            alert("Usuario registrado con éxito");
             window.location.href = 'login.html';
-            // return false;
+            return false;
         }else{
             alert("Correo ya existente");
             return false;

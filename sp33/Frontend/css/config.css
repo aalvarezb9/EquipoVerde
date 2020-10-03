@@ -56,3 +56,7 @@ hr{
 .cancel-btn:hover{
     background-color: #9c9797;
 }
+
+.red{
+    color: red !important;
+}

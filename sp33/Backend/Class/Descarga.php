@@ -9,7 +9,7 @@ class Descarga{
     public static function obtenerDatos(){
         $con=self::conexion();
         $sql = "SELECT * FROM descargas";
-        $resultado = $con -> query($query);
+        $resultado = $con -> query($sql);
         $data = $resultado ->fetch_assoc();
         return $data;
     }
