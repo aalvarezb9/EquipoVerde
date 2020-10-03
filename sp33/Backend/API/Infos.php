@@ -9,8 +9,7 @@
             $info->writeI();
         break;
         case 'GET':
-            $info = new Info($_GET['type'], $_POST['data'], getdate());
-            $info->getFileI();
+            Info::getData($_GET["fecha"],$_GET["hora"]);
         break;
     }
 ?>

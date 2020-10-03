@@ -1,5 +1,6 @@
 const tilesProvider = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
 const tilesProvider2 = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
+const url="../Backend/API/Infos.php"
 var tiempos = [];
 
 var mymap = L.map('map-sec').setView([51.505, -0.09], 2.3);
@@ -100,3 +101,28 @@ function estatico(){
 //Altura -> 700 km
 //Velocidad -> 7.51 km/S, 4.67 mi/s
 //Energía orbital -> 28.1855 J/kg
+
+
+//Charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+
+var data = google.visualization.arrayToDataTable([
+    ['Instituciones', 'Descargas por institución'],
+    ['Work',     11],
+    ['Eat',      2],
+    ['Commute',  2],
+    ['Watch TV', 2],
+    ['Sleep',    7]
+    ]);
+
+    var options = {
+        title: 'My Daily Activities'
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+    chart.draw(data, options);
+};
