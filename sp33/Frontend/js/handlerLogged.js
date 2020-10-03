@@ -93,43 +93,36 @@ function cargarFechas() {
     })
 }
 
-var horas = [];
-function enviar(hora, fecha) {
-    // console.log(hora);
-    // console.log(fecha);
+function enviar() {
+    let hora = document.getElementById('hour').value + ":00";
+    let fecha = document.getElementById('date').value;
+    
     axios({
         method: 'GET',
-        url: urlDatos,
+        url: urlDatos+`?fecha=${fecha}&hora=${hora}`,
         responseType: 'json',
+        data: {
+            fecha:fecha,
+            hora:hora
+        }
     }).then(res => {
-        horas = res.data;
-        console.log(horas);
+        console.log(res.data);
+        for(let i = 0; i<res.data.length;i++){
+            document.getElementById('temp-dato').innerHTML = res.data[i].temperatura;
+            document.getElementById('temp-hora').innerHTML = res.data[i].marcaTiempo
+            document.getElementById('pres-dato').innerHTML = res.data[i].presionAtmosferica;
+            document.getElementById('pres-hora').innerHTML = res.data[i].marcaTiempo
+            document.getElementById('altu-dato').innerHTML = res.data[i].alturaRio;
+            document.getElementById('altu-hora').innerHTML = res.data[i].marcaTiempo
+            document.getElementById('caud-dato').innerHTML = res.data[i].caudal;
+            document.getElementById('caud-hora').innerHTML = res.data[i].marcaTiempo
+            document.getElementById('prec-dato').innerHTML = res.data[i].precipitacion;
+            document.getElementById('prec-hora').innerHTML = res.data[i].marcaTiempo
+        }
+        
     }).catch(err => {
         console.log(err);
     })
-}
-
-enviar();
-
-function filtrar() {
-    let hora = document.getElementById('hour').value;
-    let fecha = document.getElementById('date').value;
-    for(let i = 0; i < horas.length; i++){
-        if(hora == horas[i].hora || fecha == horas[i].fecha){
-            console.log(horas[i]);
-            document.getElementById('temp-dato').textContent = horas[i].temperatura;
-            document.getElementById('temp-hora').textContent = horas[i].hora + ' - ' + horas[i].fecha;
-            document.getElementById('pres-dato').textContent = horas[i].presionAtmosferica;
-            document.getElementById('pres-hora').textContent = horas[i].hora + ' - ' + horas[i].fecha;
-            document.getElementById('altu-dato').textContent = horas[i].alturaRio;
-            document.getElementById('altu-hora').textContent = horas[i].hora + ' - ' + horas[i].fecha;
-            document.getElementById('caud-dato').textContent = horas[i].caudal;
-            document.getElementById('caud-hora').textContent = horas[i].hora + ' - ' + horas[i].fecha;
-            document.getElementById('prec-dato').textContent = horas[i].precipitacion;
-            document.getElementById('prec-hora').textContent = horas[i].hora + ' - ' + horas[i].fecha;
-            break;
-        }
-    }
 }
 
 

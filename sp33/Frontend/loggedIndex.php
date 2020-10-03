@@ -231,7 +231,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-            <button type="button" onclick="filtrar()" class="btn btn-primary">Filtrar</button>
+            <button type="button" onclick="enviar()" class="btn btn-primary">Filtrar</button>
             <button type="button" onclick="descargar()" class="btn btn-primary">Descargar</button>
           </div>
         </div>

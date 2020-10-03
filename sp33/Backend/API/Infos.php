@@ -9,13 +9,8 @@
         //     $info->writeI();
         // break;
         case 'GET':
-            // if($_GET['id'] == 'all'){
-                // Info::obtenerFechas();
-            // }else{
-                // Info::getData($_POST["fecha"], $_POST["hora"]);
-                Info::obtenerTodo();
-                               
-            // }
+            Info::getData($_GET["fecha"], $_GET["hora"]);
+                
         break;
     }
 ?>
